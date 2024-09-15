@@ -83,3 +83,22 @@ func TestMyHashSet_Sub(t *testing.T) {
 	assert.False(t, newSet.Contains(MyString{Value: "Batman"}))
 	assert.False(t, newSet.Contains(MyString{Value: "Robin"}))
 }
+
+type String string
+
+func (a String) Hash() string {
+	return string(a)
+}
+
+func TestMyHashSet_Constraint(t *testing.T) {
+	// Setup
+	newSet := NewSet[String, string]()
+
+	// Test
+	newSet.AddAll("type", "constraints", "rock")
+
+	// Then
+	assert.True(t, newSet.Contains("type"))
+	assert.True(t, newSet.Contains("constraints"))
+	assert.True(t, newSet.Contains("rock"))
+}
