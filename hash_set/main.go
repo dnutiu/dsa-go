@@ -10,7 +10,7 @@ type Person struct {
 	Age  int
 }
 
-// Hash returns the has of a person, it conforms to the hash_set.Hasher interface
+// Hash returns the has of a person, it conforms to the hash_set.Hashable interface
 func (p Person) Hash() string {
 	return fmt.Sprintf("%s-%d", p.Name, p.Age)
 }

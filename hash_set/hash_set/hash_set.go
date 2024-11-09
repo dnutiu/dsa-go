@@ -5,21 +5,21 @@ import (
 	"strings"
 )
 
-type MyHash interface {
+type HashKey interface {
 	~string | ~int | ~uint | ~int64 | ~uint64 | ~int32 | ~uint32 | ~int16 | ~uint16 | ~int8 | ~uint8
 }
 
-type Hasher[H MyHash] interface {
+type Hashable[H HashKey] interface {
 	Hash() H
 }
 
 // MyHashSet is a hash set implementation.
-type MyHashSet[T Hasher[H], H MyHash] struct {
+type MyHashSet[T Hashable[H], H HashKey] struct {
 	storage map[H]T
 }
 
 // NewSet initializes a new hash set.
-func NewSet[T Hasher[H], H MyHash]() MyHashSet[T, H] {
+func NewSet[T Hashable[H], H HashKey]() MyHashSet[T, H] {
 	return MyHashSet[T, H]{
 		storage: make(map[H]T, 100),
 	}
