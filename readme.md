@@ -7,8 +7,8 @@ What better way to learn a language and new concepts exists other than practicin
 
 ## Data Structures
 
-* Hash Set [Implementation](https://github.com/dnutiu/dsa-go/blob/master/hash_set/hash_set/hash_set.go) | [Tests](https://github.com/dnutiu/dsa-go/blob/master/hash_set/hash_set/hash_set_test.go)
-* Generic Stack
+* Hash Set [[Implementation](https://github.com/dnutiu/dsa-go/blob/master/hash_set/hash_set/hash_set.go)] | [[Tests](https://github.com/dnutiu/dsa-go/blob/master/hash_set/hash_set/hash_set_test.go)]
+* Generic Stack [[Implementation](https://github.com/dnutiu/dsa-go/blob/master/stack/stack.go)] | [[Tests](https://github.com/dnutiu/dsa-go/blob/master/stack/stack_test.go)]
 
 ### Other
 
